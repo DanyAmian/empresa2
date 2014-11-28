@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Empresa &mdash; empresa v0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="empresa v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for Empresa</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Dany&#39;</span>
+
+
+<div class="viewcode-block" id="Empresa"><a class="viewcode-back" href="../Empresa.html#Empresa.Empresa">[docs]</a><span class="k">class</span> <span class="nc">Empresa</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       Esta es la clase Empresa, utilizada para gestionar empleados y departamentos.</span>
+
+<span class="sd">       Las empresas que se crean en esta clase podran tener empleados y departamentos</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Empresa.__init__"><a class="viewcode-back" href="../Empresa.html#Empresa.Empresa.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_empresa</span><span class="p">,</span> <span class="n">cif</span><span class="p">,</span> <span class="n">razon_social</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param nombre_empresa: Este es el atributo para indicar el nombre de la Empresa</span>
+<span class="sd">        :param cif: Este es el atributo para indicar el cif de la Empresa</span>
+<span class="sd">        :param razon_social: Este es el atributo para indicar la razon social de la Empresa</span>
+<span class="sd">        :return: Este es el constructor, por lo que no devuelve nada</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_empresa</span> <span class="o">=</span> <span class="n">nombre_empresa</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cif</span> <span class="o">=</span> <span class="n">cif</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">razon_social</span> <span class="o">=</span> <span class="n">razon_social</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lista_departamentos</span> <span class="o">=</span> <span class="p">[]</span>
+</div>
+<div class="viewcode-block" id="Empresa.get_nombre_empresa"><a class="viewcode-back" href="../Empresa.html#Empresa.Empresa.get_nombre_empresa">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre_empresa</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo que devolvera el nombre de la Empresa</span>
+
+<span class="sd">        :return: Devolvera el nombre de la Empresa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_empresa</span>
+</div>
+<div class="viewcode-block" id="Empresa.get_cif"><a class="viewcode-back" href="../Empresa.html#Empresa.Empresa.get_cif">[docs]</a>    <span class="k">def</span> <span class="nf">get_cif</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo que devolvera el cif de la Empresa</span>
+
+<span class="sd">        :return: Devolvera el cif de la Empresa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cif</span>
+</div>
+<div class="viewcode-block" id="Empresa.get_razon_social"><a class="viewcode-back" href="../Empresa.html#Empresa.Empresa.get_razon_social">[docs]</a>    <span class="k">def</span> <span class="nf">get_razon_social</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo que devolvera la razon social de la Empresa</span>
+
+<span class="sd">        :return: Devolvera la razon social de la Empresa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">razon_social</span>
+</div>
+<div class="viewcode-block" id="Empresa.aniadir_departamento"><a class="viewcode-back" href="../Empresa.html#Empresa.Empresa.aniadir_departamento">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_departamento</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">departamento</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Metodo que aniadira un departamento a la Empresa</span>
+
+<span class="sd">        :return: Devolvera la lista de departamentos con el nuevo departamento incluido</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lista_departamentos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">departamento</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Daniel M.A..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
