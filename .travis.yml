@@ -13,7 +13,7 @@ script:
  - py.test --cov . --cov-report term-missing
 after_success:
  - coveralls
- - radon cc src/.
+ - radon cc src/. -c -a
  - radon raw src/.
  - radon mi src/.
  - radon cc tests/.
@@ -26,5 +26,4 @@ notifications:
     recipients:
         - danny_sevillista@hotmail.com
     on_failure: always
- #FALLO PARA COMPROBAR EL EMAIL
- - pep8 src/././
+
