@@ -23,4 +23,6 @@ after_success:
  - pep8 tests/.
 notifications:
   email:
-    - danny_sevillista@hotmail.com
+    recipients:
+        - danny_sevillista@hotmail.com
+    on_failure: always
