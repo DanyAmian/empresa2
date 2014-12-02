@@ -21,3 +21,6 @@ after_success:
  - radon mi tests/.
  - pep8 src/.
  - pep8 tests/.
+notifications:
+  email:
+    - danny_sevillista@hotmail.com
