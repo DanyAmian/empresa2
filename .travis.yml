@@ -19,3 +19,5 @@ after_success:
  - radon cc tests/.
  - radon raw tests/.
  - radon mi tests/.
+ - pep8 src/.
+ - pep8 tests/.
