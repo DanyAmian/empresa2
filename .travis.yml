@@ -13,4 +13,6 @@ script:
  - py.test --cov . --cov-report term-missing
 after_success:
  - coveralls
- - py.test --doctest-modules --cov . --cov-report term-missing
+ - radon cc
+ - radon raw
+ - radon mi
