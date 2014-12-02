@@ -20,7 +20,7 @@ class Departamento:
         self.lista_empleados = []
 
     def get_nombre_depto(self):
-        """Metodo que devolvera el nombre del Departamento
+        """Metodo que devolvera el nombre del Departamento.
 
         :return: Devolvera el nombre del Departamento
         """
