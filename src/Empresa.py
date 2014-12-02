@@ -18,6 +18,7 @@ class Empresa:
         """
         self.nombre_empresa = nombre_empresa
         self.cif = cif
+        FALLO PROVOCADO!
         self.razon_social = razon_social
         self.lista_departamentos = []
 
