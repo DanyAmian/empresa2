@@ -11,11 +11,11 @@ install:
 # command to run tests
 script:
  - py.test --cov . --cov-report term-missing
- - radon cc -s -a -e src/Empresa.py
- - radon raw -s -a -e src/Empresa.py
- - radon mi -s -a -e src/Empresa.py
+ - radon cc src/Empresa.py -a -nc
+ - radon raw src/Empresa.py -a -nc
+ - radon mi src/Empresa.py -a -nc
 after_success:
  - coveralls
- - radon cc -s -a -e src/Empresa.py
- - radon raw -s -a -e src/Empresa.py
- - radon mi -s -a -e src/Empresa.py
+ - radon cc src/Empresa.py -a -nc
+ - radon raw src/Empresa.py -a -nc
+ - radon mi src/Empresa.py -a -nc
