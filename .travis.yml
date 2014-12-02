@@ -11,8 +11,9 @@ install:
 # command to run tests
 script:
  - py.test --cov . --cov-report term-missing
+ - coverage run --source=src
 after_success:
- - coveralls
- - radon cc src test -a -nc
- - radon raw src test -a -nc
- - radon mi src test -a -nc
+ - coveralls report -m
+ - radon cc -s -a -e src/.
+ - radon raw -s -a -e src/.
+ - radon mi -s -a -e src/.
